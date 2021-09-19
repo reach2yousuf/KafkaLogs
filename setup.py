@@ -7,13 +7,13 @@ def read(fname):
 
 setup(
     name = "KafkaLogs",
-    version = "0.1.5",
+    version = "0.1.6",
     author = "mohammed yousuf uddin",
     author_email = "reach2yousuf@gmail.com",
     description = ("Kakfa logging made simple with python, make your log messages as kafka events out-of-the-box!"),
     license = "MIT",
     keywords = "kafka python logging",
-    url = "http://example.com",
+    url = "https://github.com/reach2yousuf/KafkaLogs",
     packages=['KafkaLogs'],
     install_requires=[
           'python-decouple',

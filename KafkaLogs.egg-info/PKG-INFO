@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: KafkaLogs
-Version: 0.1.5
+Version: 0.1.6
 Summary: Kakfa logging made simple with python, make your log messages as kafka events out-of-the-box!
-Home-page: http://example.com
+Home-page: https://github.com/reach2yousuf/KafkaLogs
 Author: mohammed yousuf uddin
 Author-email: reach2yousuf@gmail.com
 License: MIT
