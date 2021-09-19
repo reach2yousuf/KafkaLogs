@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: KafkaLogs
+Version: 0.1.5
+Summary: Kakfa logging made simple with python, make your log messages as kafka events out-of-the-box!
+Home-page: http://example.com
+Author: mohammed yousuf uddin
+Author-email: reach2yousuf@gmail.com
+License: MIT
+Description: Logging to kafka made simple with python.
+        
+        1- Installation
+        
+        - pip install KakfaLogs
+        
+        - add .env file if not exist to the root directory of your project
+        
+        2 -sample .env file
+        
+            CRITICAL=1
+            WARNING=2
+            INFO=3
+            ERROR=4
+            METRIC=5
+            GENERATE_LOG_FILE=yes
+            DIR=/tmp/logs/
+            ENVIRONMENT=debug
+            APPLICATION=<your_app_name>
+            NOTIFY_URL=#
+            TEAM=de
+            APPLICATION_GROUP=tw
+            AGENT=kafka
+            KAFKA_BROKERS=localhost:9092
+            TOPIC=<your_topic>
+        
+        3- configuration properties explained
+        
+            TEAM
+                de=data-engineering;ds=data science;se=software engineering
+        
+            APPLICATION_GROUP
+                tw=twitter
+                nw=news;
+                cv=covid-19
+                ai=artificial intelligence
+        
+            AGENT
+                Allowed values : kafka
+                kafka -->> logs will be sent to kafka to specified TOPIC and configured KAFKA_BROKERS
+        
+            ENVIRONMENT=debug
+                Allowed values : development, debug or production
+            DIR
+                Log file path where logs will be generated.
+        
+            GENERATE_LOG_FILE
+                Allowed values : yes/no
+                If GENERATE_LOG_FILE=yes, log messages being copied to file on location specified in DIR variable.
+                    eg:20210726.log
+        
+        
+        ## Note:
+        ### If Kafka brokers refused connection, the logs will be writing to file specified in DIR location with a file name    prefix "failover_"
+        ### eg: failover_210803.log
+        
+        
+        4- Sample usage
+        
+            import KafkaLogs as log
+        
+            log.info("hello there!")
+            dict = {"count": 100, "date" : "2021-07-06"}
+            log.info(msg="Yet another log!", extra_data=dict)
+            log.error("Opps! that's an error.")
+            log.critical("Gosh! The application has encountered a fatal error!")
+            log.warning("That's a warning!")
+            dict = {"count": 100}
+            log.metrics(msg="",  extra_data=dict)
+        
+        License:MIT
+        
+Keywords: kafka python logging
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

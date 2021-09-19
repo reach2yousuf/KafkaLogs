@@ -1,0 +1,9 @@
+LICENSE.txt
+README
+setup.py
+KafkaLogs/__init__.py
+KafkaLogs.egg-info/PKG-INFO
+KafkaLogs.egg-info/SOURCES.txt
+KafkaLogs.egg-info/dependency_links.txt
+KafkaLogs.egg-info/requires.txt
+KafkaLogs.egg-info/top_level.txt
